@@ -1,0 +1,24 @@
+<div class="main">
+  <div class="main-title">
+    <h1>Weather</h1>
+  </div>
+
+  <div class="app">
+    <div class="app-title"><span>{{cityName}}</span></div>
+
+    <div class="app-input">
+
+      <input #userInput (keyup.enter)="onEnter(userInput.value)" type="text" placeholder="Enter the name of the city">
+      <button (click)="onEnter(userInput.value)">Submit</button>
+
+    </div>
+
+    <div class="app-data">
+      <app-weather-info-component *ngIf="weatherData != null" [data]="weatherData"></app-weather-info-component>
+    </div>
+  </div>
+</div>
+<footer>
+  <span>Nikolay Rozum</span>
+  <span>991480365</span>
+</footer>
